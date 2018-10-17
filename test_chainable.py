@@ -15,19 +15,19 @@ def multiply(x, y):
 
 def test_map_returns_correct_output():
     chainable = Chainable([1, 2, 3])
-    assert [2, 3, 4] == chainable._map(add_1).data
+    assert [2, 3, 4] == chainable.map(add_1).data
 
 
 def test_filter():
     chainable = Chainable([1, 2, 3])
-    assert [1, 3] == chainable._filter(is_odd).data
+    assert [1, 3] == chainable.filter(is_odd).data
 
 
 def test_it_can_chain_map_and_filter():
     chainable = Chainable([1, 2, 3])
-    assert [3] == chainable._map(add_1)._filter(is_odd).data
+    assert [3] == chainable.map(add_1).filter(is_odd).data
 
 
 def test_reduce():
     chainable = Chainable([1, 2, 3])
-    assert 6 == chainable._reduce(multiply).data
+    assert 6 == chainable.reduce(multiply).data
