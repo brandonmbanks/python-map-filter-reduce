@@ -1,5 +1,6 @@
 # python-map-filter-reduce
----
+[![Build Status](https://travis-ci.com/brandonmbanks/python-map-filter-reduce.svg?branch=master)](https://travis-ci.com/brandonmbanks/python-map-filter-reduce)
+
 The goal is to make map, filter, and reduce easier to write and use in Python.
 
 Currently `map`, `filter`, and `reduce` syntax can be messy and is difficult to chain.
