@@ -57,7 +57,7 @@ pipenv install
 
 **Run tests**
 ```bash
-pytest
+pipenv run pytest
 ```
 
 ### Todos
