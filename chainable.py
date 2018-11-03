@@ -6,13 +6,10 @@ class Chainable(object):
         self.data = data
 
     def map(self, fn):
-        self.data = list(map(lambda x: fn(x), self.data))
-        return self
+        return Chainable(list(map(fn, self.data)))
 
     def filter(self, fn):
-        self.data = list(filter(lambda x: fn(x), self.data))
-        return self
+        return Chainable(list(filter(fn, self.data)))
 
     def reduce(self, fn):
-        self.data = reduce(lambda x, acc: fn(x, acc), self.data)
-        return self
+        return Chainable(reduce(fn, self.data))
