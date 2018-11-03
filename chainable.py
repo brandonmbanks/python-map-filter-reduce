@@ -12,4 +12,4 @@ class Chainable(object):
         return Chainable(list(filter(fn, self.data)))
 
     def reduce(self, fn):
-        return Chainable(reduce(lambda x, acc: fn(x, acc), self.data))
+        return Chainable(reduce(fn, self.data))
